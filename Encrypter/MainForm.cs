@@ -103,6 +103,7 @@ namespace Encrypter
                     string writeText = AESConveter.Encrypt(_textBox.Text);
                     File.WriteAllText(_openFileDialog.FileName, writeText);                    
                     _isModified = false;
+                    UpdateTitle();
                 }
                 catch (Exception)
                 {
