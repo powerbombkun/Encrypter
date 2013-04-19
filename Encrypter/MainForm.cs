@@ -311,6 +311,7 @@ namespace Encrypter
                 string readText = File.ReadAllText(dropFiles[0]);
                 _textBox.Text = AESConveter.Decrypt(readText);
                 _isModified = false;
+                _openFileDialog.FileName = dropFiles[0];
                 UpdateTitle();
             }
             catch (Exception)
